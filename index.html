@@ -314,21 +314,21 @@
                 </button>
                 <!-- THURSDAY -->
                 <button onclick="selectDay('OLAHRAGA', 'OLAHRAGA', 'Healthy Date', 'Semua aktivitas olahraga dan kebugaran bersama doi.', '🏃‍♂️')" class="day-btn bg-white hover:bg-[#ffccd5] text-[#8c1c24] p-4 rounded-2xl shadow-md transition-all duration-300 transform hover:-translate-y-1 text-center border-b-4 border-gray-200">
-                    <span class="block text-xs uppercase font-bold text-gray-400">WEDDING PLANNER</span>
+                    <span class="block text-xs uppercase font-bold text-gray-400">WEDDING PLANNER ⭐</span>
                     <span class="text-2xl my-2 block">👰🤵</span>
                     <span class="font-cute text-sm block font-bold">Rencana Pernikahan</span>
                     <span class="text-[10px] text-gray-500 block mt-1">Makin Siap</span>
                 </button>
                 <!-- FRIDAY -->
                 <button onclick="selectDay('COUPLE', 'COUPLE', 'Momen Romantis', 'Momen romantis, kebiasaan sehari-hari, dan simbol hubungan hangat.', '💖')" class="day-btn bg-white hover:bg-[#ffccd5] text-[#8c1c24] p-4 rounded-2xl shadow-md transition-all duration-300 transform hover:-translate-y-1 text-center border-b-4 border-gray-200">
-                    <span class="block text-xs uppercase font-bold text-gray-400">TRAVEL PLANNER</span>
+                    <span class="block text-xs uppercase font-bold text-gray-400">TRAVEL PLANNER 🔒</span>
                     <span class="text-2xl my-2 block">🚗</span>
                     <span class="font-cute text-sm block font-bold">Wisata & Budget</span>
                     <span class="text-[10px] text-gray-500 block mt-1">Rekomendasi Wisata</span>
                 </button>
                 <!-- SATURDAY -->
                 <button onclick="selectDay('SPESIAL', 'SPESIAL', 'Momen Spesial', 'Momen penting yang menunjukkan perkembangan hubungan kalian.', '✨')" class="day-btn bg-white hover:bg-[#ffccd5] text-[#8c1c24] p-4 rounded-2xl shadow-md transition-all duration-300 transform hover:-translate-y-1 text-center border-b-4 border-gray-200">
-                    <span class="block text-xs uppercase font-bold text-gray-400">TABUNGAN</span>
+                    <span class="block text-xs uppercase font-bold text-gray-400">TABUNGAN 🔒</span>
                     <span class="text-2xl my-2 block">🎁</span>
                     <span class="font-cute text-sm block font-bold">Simpan & Catat</span>
                     <span class="text-[10px] text-gray-500 block mt-1">Menabung Untuk Tujuan</span>
@@ -361,7 +361,7 @@
             <!-- Left Side: Copyable Caption UI (8 Columns) -->
             <div class="lg:col-span-7 space-y-6">
                 <div class="flex items-center gap-3">
-                    <span class="text-xs uppercase tracking-widest text-[#a87a71] font-semibold">BUCIN, AESTHETIC, QOUTES & LAINNYA</span>
+                    <span class="text-xs uppercase tracking-widest text-[#a87a71] font-semibold">LOVED, SELF LOVE, AESTHETIC & LAINNYA</span>
                     <span class="bg-[#8c1c24] text-white text-[10px] px-2.5 py-1 rounded-full font-bold uppercase animate-pulse">30+ Caption</span>
                 </div>
                 <h2 class="font-serif-aesthetic text-3xl md:text-5xl font-bold text-[#8c1c24] leading-tight">
@@ -375,9 +375,9 @@
                 <div class="bg-white p-6 rounded-3xl shadow-xl border-2 border-[#ffccd5]">
                     <!-- Tabs -->
                     <div class="flex space-x-2 border-b border-gray-100 pb-4 mb-4 overflow-x-auto">
-                        <button id="tab-sweet" onclick="filterCaptions('sweet')" class="caption-tab-btn active px-4 py-2 bg-[#8c1c24] text-white rounded-full text-xs font-bold transition-all">🍭 Sweet Vibes</button>
-                        <button id="tab-romantic" onclick="filterCaptions('romantic')" class="caption-tab-btn px-4 py-2 bg-gray-100 hover:bg-[#ffccd5] text-[#4a2e2b] rounded-full text-xs font-bold transition-all">💖 Romantic Date</button>
-                        <button id="tab-party" onclick="filterCaptions('party')" class="caption-tab-btn px-4 py-2 bg-gray-100 hover:bg-[#ffccd5] text-[#4a2e2b] rounded-full text-xs font-bold transition-all">✨ Pop-up & Event</button>
+                        <button id="tab-loved" onclick="filterCaptions('loved')" class="caption-tab-btn active px-4 py-2 bg-[#8c1c24] text-white rounded-full text-xs font-bold transition-all">Loved 💞</button>
+                        <button id="tab-selflove" onclick="filterCaptions('selflove')" class="caption-tab-btn px-4 py-2 bg-gray-100 hover:bg-[#ffccd5] text-[#4a2e2b] rounded-full text-xs font-bold transition-all">Sefl Love ✨</button>
+                        <button id="tab-aesthetic" onclick="filterCaptions('aesthetic')" class="caption-tab-btn px-4 py-2 bg-gray-100 hover:bg-[#ffccd5] text-[#4a2e2b] rounded-full text-xs font-bold transition-all">Aesthetic 🌟</button>
                         <button id="tab-ai-caption" onclick="showAICaptionUI()" class="caption-tab-btn px-4 py-2 bg-fde8e9 hover:bg-[#ffccd5] text-[#8c1c24] rounded-full text-xs font-bold transition-all border border-[#fbc4cb] flex items-center gap-1">
                             <i class="fa-solid fa-wand-magic-sparkles text-[10px]"></i> AI Custom Caption
                         </button>
@@ -750,39 +750,133 @@
     <script>
         // --- Static Data & Database ---
         const captionsData = {
-            sweet: [
-                "🧁 \"Life is short, make it sweet as candy!\" - Mampir ke gerobak kami hari ini.",
-                "🍭 \"Every little candy tells a sweet story of pure delight.\" ✨",
-                "🍬 \"Warm like sunshine, sweet like honey candy! Let's cherish today.\"",
-                "🍧 \"Pahitnya hari bisa selalu diobati dengan sepiring manisnya tawa.\"",
-                "🥨 \"Wrapped with love, crafted to perfection. Your favorite sweet spot.\""
+            loved: [
+                "we're still writing our favorite chapter",
+                "we didn't just survive, we bloomed",
+                "we're not perfect, but we're synced",
+                "from day one to always",
+                "still choosing you, in every version of me",
+                "you're my favorite notification",
+                "with you, everything feels right",
+                "happier than ever",
+                "just the two of us",
+                "one person, thousand feelings", 
+                "making memories with my favorite person", 
+                "love without end",
+                "never been happier", 
+                "right place, right time, right person", 
+                "heart full, because of you"
             ],
-            romantic: [
-                "💖 \"You are the candy of my life. Sweetest moments with you.\"",
-                "🍒 \"Our love is sweet, warm, and decorated with beautiful cherries of joy.\"",
-                "✨ \"Strolling through sweet alleyways holding hands and sharing ice cream cones.\"",
-                "🍓 \"100+ Ide kencan romantis tapi ide favoritku tetap bersamamu.\"",
-                "🍨 \"A date with sugar, spice, and everything nice in life.\""
+            selflove: [
+                "if i'm too much, go find less",
+                "unavailable for bare minimum",
+                "learning to be my own home",
+                "less pleasing, more being",
+                "becoming the calm i craved",
+                "unlearning the need to prove",
+                "beautiful, even on ordinary days", 
+                "made of of quite confidence",
+                "i'm not as good as my post",
+                "still learning to rest, not quit"
             ],
-            party: [
-                "🎉 \"Adding a sweet scoop of elegance and aesthetic candy vibes to your big days!\"",
-                "🌟 \"Designed to delight your beloved guests. Vintage Cart on Duty!\"",
-                "🥂 \"Weddings, birthdays, or weekend pop-ups? Let us build the sweet spot.\"",
-                "🧁 \"Circle candy cart is bringing sweetness to your sweet table!\"",
-                "🎈 \"Pop-up with us and witness the aesthetic candy magic happen!\""
+            aesthetic: [
+                "camera crumbs",
+                "recent diaries",
+                "life lately",
+                "today, we celebrate me",
+                "national me day",
+                "swipe left, besties",
+                "unseen bits",
+                "clearing out my gallery", 
+                "the lost files",
+                "monthly recap"
             ]
         };
 
         const dateIdeas = [
-            "Menyiapkan piknik permen dan es krim di taman senja terdekat.",
-            "Mengunjungi galeri seni lokal sambil berbisik tentang masa depan yang manis.",
-            "Melakukan petualangan bersepeda sore menyusuri rute gerobak permen vintage.",
-            "Berbagi cotton candy raksasa dan berfoto aesthetic di Polaroid booth.",
-            "Membuat es buah kustom di dapur rumah bersama pasangan sambil memutar lagu retro.",
-            "Membeli dessert box rasa stroberi untuk dimakan bersama di dalam mobil saat hujan.",
-            "Membuat lilin aroma terapi berdua bertema wangi permen karamel.",
-            "Berburu piring kaca antik di pasar loak untuk wadah permen di rumah."
-        ];
+                "Deep talk sambil sunset",
+                "Jogging bareng",
+                "Movie date",
+                "Pantai date",
+                "Diucapin selamat pagi",
+                "Sushi date",
+                "Photobox / Photostudio",
+                "Ngabuburit bareng",
+                "Nyanyiin doi",
+                "Puzzle date",
+                "Bakmi date",
+                "Baju couple",
+                "Kondangan bareng",
+                "Maskeran bareng",
+                "Dikasih bouquet",
+                "Jalan kaki berdua",
+                "Museum date",
+                "Badminton date",
+                "Ngobrol sampai lupa waktu",
+                "Candle Light Dinner",
+                "Starbucks date",
+                "Nemenin futsal",
+                "Camping",
+                "Deep talk",
+                "Motoran keliling kota",
+                "Mie Gacoan date",
+                "Berenang",
+                "Masakin doi",
+                "Punya nama panggilan khusus",
+                "Dikenalin ke orang tua",
+                "Video call",
+                "Painting date",
+                "Diantar / Dijemput kerja",
+                "Berantem",
+                "Holiday bareng",
+                "Mabar game",
+                "Bersepeda bareng",
+                "Dihibur & Ditemenin saat sedih",
+                "Piknik di taman",
+                "Dimasakin doi",
+                "Selfie berdua",
+                "Hujan-hujanan",
+                "Main catur",
+                "Cafe date",
+                "Taman hiburan",
+                "Ngopi",
+                "Ke CFD",
+                "Birthday date",
+                "Berselisih pendapat",
+                "Di-post tanpa diminta",
+                "Lukisan cap tangan berdua",
+                "Zoo date",
+                "Ngerayain birthday",
+                "Nangis bareng",
+                "Aquarium date",
+                "Marugame date",
+                "Ngobrol soal masa depan",
+                "Burayam pagi",
+                "Dikasih gift",
+                "Jalan pagi",
+                "Dijemput / Ngejemput",
+                "Cooking date",
+                "Case HP couple",
+                "TikTok bareng",
+                "Nonton konser",
+                "Karaoke bareng",
+                "Makan sepiring berdua",
+                "Trampolin date",
+                "Baju couple",
+                "Putus tapi nyambung lagi",
+                "Punya usaha bareng",
+                "Angkringan date",
+                "Dikasih surprise",
+                "Diajak ke acara keluarga",
+                "Netflix date",
+                "Ngerasa jealous",
+                "Telponan",
+                "Gelang couple",
+                "Ngerasa disayang banget",
+                "Tukar kado",
+                "Hujan-hujanan",
+                "Iseng / Diisengin"
+];
 
         const wishlistsData = {
             KULINER: [
@@ -824,14 +918,14 @@
         };
 
         // --- Active States ---
-        let currentCategory = 'sweet';
+        let currentCategory = 'loved';
         let activeCategoryKey = 'KULINER';
         let activeStickerVibe = 'pastel watercolor chibi style, highly detailed illustration, sweet and soft colors, white background';
         let generatedStickerBase64 = null;
 
         // --- Initialize App ---
         window.onload = function() {
-            filterCaptions('sweet');
+            filterCaptions('loved');
             generateRandomDateIdea();
             selectDay('Senin', 'KULINER', 'Makan & Minum', 'Semua aktivitas yang berhubungan dengan makan, minum, dan menikmati waktu bersama.', '🍩');
         };
@@ -1324,24 +1418,6 @@
             }
         }
 
-        // --- Claim Modal Logic ---
-        function openClaimModal() {
-            const modal = document.getElementById('claim-modal');
-            modal.classList.remove('hidden');
-            document.getElementById('modal-success-state').classList.add('hidden');
-            document.getElementById('bonus-form').reset();
-        }
-
-        function closeClaimModal() {
-            document.getElementById('claim-modal').classList.add('hidden');
-        }
-
-        function handleClaimSubmit(event) {
-            event.preventDefault();
-            const successState = document.getElementById('modal-success-state');
-            successState.classList.remove('hidden');
-            showToast('Klaim Gift Box Berhasil dikirim!', '🎁');
-        }
     </script>
 </body>
 </html>
