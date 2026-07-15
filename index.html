@@ -467,32 +467,32 @@
     </section>
 
 
-    <!-- BANNER CONTAINER (Latar belakang abu-biru lembut luar - Space Tinggi Dipersempit) -->
+    <!-- PRODUK ALKASA COUPLE BOOK -->
 <div class="w-full min-h-fit bg-[#dce1f2] py-8 px-4 md:py-12 md:px-8 flex justify-center items-center font-sans select-none">
     
-    <!-- MAIN CARD FRAME (Kapsul putih dengan garis putus-putus dalam) -->
     <section class="w-full max-w-5xl bg-white rounded-[32px] p-6 md:p-10 shadow-2xl relative border-8 border-white">
         
-        <!-- Garis putus-putus pemanis frame paling luar -->
         <div class="absolute inset-0 rounded-[24px] border border-dashed border-gray-300/80 pointer-events-none m-2"></div>
 
-        <!-- ISI KONTEN UTAMA -->
         <div class="max-w-3xl mx-auto flex flex-col items-center text-center space-y-5 relative z-10">
             
-            <!-- Gambar Snack Keychain -->
-            <div class="w-24 md:w-32 flex-shrink-0 flex justify-center transform -rotate-3 hover:rotate-0 transition-transform duration-300 drop-shadow-md">
-                <img src="https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/897fff272df643db8a67e053bd86b807~tplv-aphluv4xwc-resize-jpeg:700:0.jpeg" 
+            <a href="https://id.shp.ee/xnatSrrA" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="w-24 md:w-32 h-24 md:h-32 flex-shrink-0 flex justify-center items-center transform -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 drop-shadow-md overflow-hidden bg-gray-50 rounded-md block cursor-pointer"
+               title="Klik untuk beli di Shopee">
+                <img id="slideshow-image" 
+                     src="https://images.tokopedia.net/img/cache/700/aphluv/1997/1/1/7f0e2a23b1744a3583c0c79fdd693466~.jpeg.webp" 
                      alt="Mini Snack Keychain Custom" 
-                     class="w-full h-auto object-contain rounded-md">
-            </div>
+                     class="w-full h-full object-contain rounded-md transition-opacity duration-300 opacity-100">
+            </a>
             
-            <!-- Judul Utama & Subtitle -->
             <div class="space-y-2">
                 <h2 class="font-serif text-3xl md:text-5xl font-bold text-[#8c1c24] tracking-wide leading-tight">
                     Mini Snack Keychain Custom
                 </h2>
                 <p class="font-serif italic text-xl md:text-3xl text-[#c78289] font-medium tracking-wide">
-                    Mini Kadonya Besar Cintanya
+                    Biar Makin Seru Nge-Date Nya
                 </p>
             </div>
             
@@ -500,7 +500,40 @@
     </section>
 </div>
 
-</div>
+<script>
+    // Daftar gambar dari Tokopedia
+    const images = [
+        "https://images.tokopedia.net/img/cache/700/aphluv/1997/1/1/7f0e2a23b1744a3583c0c79fdd693466~.jpeg.webp",
+        "https://images.tokopedia.net/img/cache/700/aphluv/1997/1/1/6af6780690ca424e86507ae1624bfc55~.jpeg.webp",
+        "https://images.tokopedia.net/img/cache/700/aphluv/1997/1/1/1dd524fa45a14d499e27b3e2c414180b~.jpeg.webp",
+        "https://images.tokopedia.net/img/cache/700/aphluv/1997/1/1/734c56ed850b4275a9512e21372a62fa~.jpeg.webp",
+        "https://images.tokopedia.net/img/cache/700/aphluv/1997/1/1/94f688bc6102440394fd84febbcdcc43~.jpeg.webp"
+    ];
+
+    let currentIndex = 0;
+    const imgElement = document.getElementById('slideshow-image');
+
+    // Fungsi untuk mengganti gambar dengan transisi fade-out & fade-in
+    function changeImage() {
+        if (!imgElement) return;
+        
+        // 1. Samarkan gambar terlebih dahulu (fade-out)
+        imgElement.classList.remove('opacity-100');
+        imgElement.classList.add('opacity-0');
+
+        // Tunggu transisi fade-out selesai (150ms), lalu ganti source gambar
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            imgElement.src = images[currentIndex];
+            
+            // 2. Munculkan kembali gambar baru (fade-in)
+            imgElement.classList.remove('opacity-0');
+            imgElement.classList.add('opacity-100');
+        }, 150); 
+    }
+
+    // Jalankan pergantian gambar setiap 2000 milidetik (2 detik)
+    setInterval(changeImage, 2000);
 </script>
 
 </div>
